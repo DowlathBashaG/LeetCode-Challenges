@@ -28,9 +28,13 @@ public class FindKthLargestElement_2 {
        Queue<Integer> q = new PriorityQueue<>();
        for(Integer i : a){
            q.offer(i);
-           if(q.size() > k)
+           System.out.println(i+ " offer "+ q);
+           if(q.size() > k) {
                q.poll();
+               System.out.println(i + " poll " + q);
+           }
        }
+        System.out.println("Peek  .... :"+ q.peek());
         return q.peek();
     }
 
